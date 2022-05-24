@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: doslabel
+   labels:
+     app: front
+     env: dev
+spec:
+   containers:
+      - image: nginx:alpine
+        name: ct1
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: doslabel2
+   labels:
+     app: backend
+     env: dev
+spec:
+   containers:
+      - image: nginx:alpine
+        name: ct2
